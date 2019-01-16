@@ -25,8 +25,8 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
             %w[a b c d],
             %w[a b c d],
             %w[a b c d],
-            %w[a b c d]].to_json,
-        word: 'aa'}
+            %w[a b c d]],
+        word: 'aa'}.to_json
     result = JSON.parse(@response.body)
     assert_equal false, result
   end
@@ -37,8 +37,8 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
             %w[a b c d],
             %w[a b c d],
             %w[a b c d],
-            %w[a b c d]].to_json,
-        word: 'aaa'}
+            %w[a b c d]],
+        word: 'aaa'}.to_json
     result = JSON.parse(@response.body)
     assert_equal true, result
   end
@@ -49,8 +49,8 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
             %w[a b c d],
             %w[a b c d],
             %w[a b c d],
-            %w[a b c d]].to_json,
-        word: 'aaaaa'}
+            %w[a b c d]],
+        word: 'aaaaa'}.to_json
     result = JSON.parse(@response.body)
     assert_equal false, result
   end

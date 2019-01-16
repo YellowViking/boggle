@@ -13,8 +13,9 @@ class ApplicationController < ActionController::API
 
 
   def validate
-    board = JSON.parse params[:board]
-    word = params[:word]
+    json = JSON.parse(request.body.read)
+    board = json['board']
+    word = json['word']
 
     result = false
     visited = Set.new
