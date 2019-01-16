@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     get '/game' => :game
     post '/validate' => :validate
   end
+
+  get '/', :to => redirect('/index.html')
 end
